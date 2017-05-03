@@ -1,0 +1,11 @@
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile "org.codehaus.groovy:http-builder:0.4.0"
+}
