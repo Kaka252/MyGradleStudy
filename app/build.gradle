@@ -21,7 +21,16 @@ android {
     }
 }
 
-task executeTask(type: MyTask)
+task downloadFile(type: MyTask)
+
+afterEvaluate {
+    tasks.matching {
+        it.name.startsWith('process') && (it.name.endsWith('ReleaseJavaRes') || it.name.endsWith
+                ('DebugJavaRes'))
+    }.each { tk ->
+        tk.dependsOn(downloadFile)
+    }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])

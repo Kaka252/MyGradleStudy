@@ -9,7 +9,7 @@ class MyTask extends DefaultTask {
     private static final String FILE_NAME = "test.txt";
 
     @TaskAction
-    def executeTask() {
+    def downloadFile() {
         println("Start Download")
 
         def connection = new URL("https://www.baidu.com").openConnection()
