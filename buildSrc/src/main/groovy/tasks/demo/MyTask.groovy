@@ -14,13 +14,13 @@ class MyTask extends DefaultTask {
 
         def connection = new URL("https://www.baidu.com").openConnection()
         connection.setRequestProperty('User-Agent', 'Mozilla/5.0 Firefox/3.0.4')
-        connection.setRequestMethod('GET')
         connection.doOutput = true
         connection.connect()
 
         def text = connection.content.text
-        byte[] bytes = text.toString().getBytes("utf-8")
-        File file = new File(FILE_PATH, FILE_NAME);
+
+        def bytes = text.getBytes("utf-8") as byte[]
+        def file = new File(FILE_PATH, FILE_NAME);
         def fos = new FileOutputStream(file)
         fos.write(bytes)
         fos.flush()
