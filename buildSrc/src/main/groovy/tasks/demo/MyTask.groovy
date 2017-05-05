@@ -25,6 +25,7 @@ class MyTask extends DefaultTask {
         fos.write(bytes)
         fos.flush()
         fos.close()
+
         println("Complete Download")
     }
 
