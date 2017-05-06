@@ -6,6 +6,10 @@ dependencies {
     compile gradleApi()
     //groovy sdk
     compile localGroovy()
+
+    apply plugin: 'java'
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
 }
 
 repositories {
