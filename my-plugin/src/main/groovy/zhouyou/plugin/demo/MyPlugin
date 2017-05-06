@@ -11,6 +11,14 @@ public class MyPlugin implements Plugin<Project> {
         println("hello gradle.properties plugin!")
         println("========================")
 
-        project.task('TestTask', type: TestTask)
+//        def task = project.task('downloadFile', type: TestTask)
+//        project.afterEvaluate {
+//            tasks.matching {
+//                it.name.startsWith('process') && (it.name.endsWith('ReleaseJavaRes') || it.name.endsWith
+//                        ('DebugJavaRes'))
+//            }.each {
+//                tk -> tk.dependsOn(task)
+//            }
+//        }
     }
 }
