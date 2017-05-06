@@ -10,5 +10,7 @@ public class MyPlugin implements Plugin<Project> {
         println("========================")
         println("hello gradle.properties plugin!")
         println("========================")
+
+        project.task('TestTask', type: TestTask)
     }
 }
