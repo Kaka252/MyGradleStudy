@@ -26,8 +26,8 @@ install {
                 //添加开发者信息
                 developers {
                     developer {
-                        name 'kaka252'
-                        email 'kaka252@sina.com'
+                        name 'neroisnovice252'
+                        email 'zhouyou19880216@gmail.com'
                     }
                 }
 
@@ -48,10 +48,9 @@ bintray {
 
     configurations = ['archives']
     pkg {
-        userOrg = 'kanzhun'
         repo = 'maven' // 上传到中央仓库的名称
-        name = 'myplugin' // 上传到jcenter 的项目名称
-        desc = 'test gradle plugin' // 项目描述
+        name = 'gradleplugin' // 上传到jcenter 的项目名称
+        desc = 'This is a plugin demo test' // 项目描述
         websiteUrl = siteUrl
         issueTrackerUrl = issueUrl
         vcsUrl = gitUrl

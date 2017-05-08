@@ -21,12 +21,3 @@ group = PROJ_GROUP
 
 // 应用插件
 apply from: '../bintray.gradle'
-
-// 上传到本地代码库
-//uploadArchives {
-//    repositories.mavenDeployer {
-//        repository(url: uri('D:/repos'))
-//        pom.groupId = PROJ_GROUP
-//        pom.version = PROJ_VERSION
-//    }
-//}
